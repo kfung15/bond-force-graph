@@ -4,8 +4,46 @@ import ForceGraph2D from 'react-force-graph-2d'
 
 
 const bond_data = {
-  nodes: [{id: "abc", group: 1},{id: "fgh", group: 1},{id: "lpj", group: 1},{id: "alk", group: 1}],
-  links: [{source: "abc", target: "fgh", value: 0.1234}, {source: "fgh", target: "lpj", value: 0.9334},{source: "lpj", target: "alk", value: 0.5642},{source: "abc", target: "alk", value: 0.1234}]
+  nodes: [
+    {
+        "id": "abc", 
+        "group": 1
+    },
+    {
+        "id": "fgh", 
+        "group": 1
+    },
+    {
+        "id": "lpj",
+        "group": 1
+    },
+    {
+        "id": "alk", 
+        "group": 1
+    }
+],
+  links: [
+      {
+          "source": "abc",
+          "target": "fgh",
+          "value": 0.1234
+      },
+      {
+          "source": "fgh",
+          "target": "lpj",
+          "value": 0.9334
+      },
+      {
+          "source": "lpj",
+          "target": "alk",
+          "value": 0.5642
+      },
+      {
+          "source": "abc",
+          "target": "alk",
+          "value": 0.1234
+      }
+  ]
 }
 
 
