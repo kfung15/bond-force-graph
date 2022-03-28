@@ -1,5 +1,7 @@
 import './App.css';
 import ForceGraph2D from 'react-force-graph-2d'
+import d3Force from 'd3-force-3d'
+import {useEffect, useRef} from 'react'
 
 
 const bond_data = {
@@ -37,9 +39,16 @@ const bond_data = {
 
 
 function App() {
+  const fgRef = useRef()
+
+  useEffect(() => {
+    const fg = fgRef.current;
+    fg.d3Force('link').distance(link => 20)
+  })
+
   return (
     <div className="App">
-      <ForceGraph2D graphData={bond_data}  
+      <ForceGraph2D graphData={bond_data} ref={fgRef} 
           width={1920}
           height={1080}
           nodeAutoColorBy="group"
@@ -68,7 +77,6 @@ function App() {
           
           linkWidth={(link) => (link.value * 10)}
           linkLabel={(link) => ("Price Corr (" + link.source.id + "-" + link.target.id + "): " + link.value)}
-
           />
     </div>
   );
