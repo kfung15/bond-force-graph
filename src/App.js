@@ -13,27 +13,27 @@ const bond_data = {
           {"id": "jek", "group": 1},
           {"id": "mkl", "group": 1}
   ],
-  links: [{"source": "abc", "target": "fgh", "value": 0.05}, 
-          {"source": "abc", "target": "lpj", "value": 0.19},  
-          {"source": "abc", "target": "alk", "value": 0.1234},
-          {"source": "abc", "target": "pur", "value": 0.6585},
-          {"source": "abc", "target": "jek", "value": 0.4823},
-          {"source": "abc", "target": "mkl", "value": 0.4823},
-          {"source": "fgh", "target": "lpj", "value": 0.9334},
-          {"source": "fgh", "target": "alk", "value": 0.7854},
-          {"source": "fgh", "target": "pur", "value": 0.7854},
-          {"source": "fgh", "target": "jek", "value": 0.7234},
-          {"source": "fgh", "target": "mkl", "value": 0.7234},
-          {"source": "lpj", "target": "alk", "value": 0.5642},
-          {"source": "lpj", "target": "pur", "value": 0.5642},
-          {"source": "lpj", "target": "jek", "value": 0.9272},
-          {"source": "lpj", "target": "mkl", "value": 0.9272},
-          {"source": "alk", "target": "pur", "value": 0.5642},
-          {"source": "alk", "target": "jek", "value": 0.2938},
-          {"source": "alk", "target": "mkl", "value": 0.2938},
-          {"source": "pur", "target": "jek", "value": 0.5938},
-          {"source": "pur", "target": "mkl", "value": 0.5938},
-          {"source": "jek", "target": "mkl", "value": 0.5938},
+  links: [{"source": "abc", "target": "fgh", "value": 0.05, "distance": 10}, 
+          {"source": "abc", "target": "lpj", "value": 0.19, "distance": 20},  
+          {"source": "abc", "target": "alk", "value": 0.1234, "distance": 30},
+          {"source": "abc", "target": "pur", "value": 0.6585,"distance": 20},
+          {"source": "abc", "target": "jek", "value": 0.4823, "distance": 10},
+          {"source": "abc", "target": "mkl", "value": 0.4823, "distance": 20},
+          {"source": "fgh", "target": "lpj", "value": 0.9334,"distance": 30},
+          {"source": "fgh", "target": "alk", "value": 0.7854,"distance": 20},
+          {"source": "fgh", "target": "pur", "value": 0.7854,"distance": 10},
+          {"source": "fgh", "target": "jek", "value": 0.7234,"distance": 20},
+          {"source": "fgh", "target": "mkl", "value": 0.7234,"distance": 30},
+          {"source": "lpj", "target": "alk", "value": 0.5642,"distance": 50},
+          {"source": "lpj", "target": "pur", "value": 0.5642,"distance": 10},
+          {"source": "lpj", "target": "jek", "value": 0.9272,"distance": 20},
+          {"source": "lpj", "target": "mkl", "value": 0.9272,"distance": 30},
+          {"source": "alk", "target": "pur", "value": 0.5642,"distance": 20},
+          {"source": "alk", "target": "jek", "value": 0.2938,"distance": 10},
+          {"source": "alk", "target": "mkl", "value": 0.2938,"distance": 20},
+          {"source": "pur", "target": "jek", "value": 0.5938,"distance": 30},
+          {"source": "pur", "target": "mkl", "value": 0.5938,"distance": 20},
+          {"source": "jek", "target": "mkl", "value": 0.5938,"distance": 10},
   ]
 }
 
@@ -43,8 +43,12 @@ function App() {
 
   useEffect(() => {
     const fg = fgRef.current;
-    fg.d3Force('link').distance(link => 20)
-  })
+    fg.d3Force('link').distance(link => 
+      link.distance
+    )
+
+    
+  }, [bond_data])
 
   return (
     <div className="App">
