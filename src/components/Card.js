@@ -1,5 +1,4 @@
 import React from 'react';
-import bootstrap from 'bootstrap'
 import './Card.css'
 
 
@@ -7,7 +6,7 @@ import './Card.css'
 function Card (props) {
 
     return (
-            <div className="forceGraphCard">
+            <div class="card">
                 {props.contentObj}
             </div>
     )

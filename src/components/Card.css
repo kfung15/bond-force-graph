@@ -1,5 +1,5 @@
-.forceGraphCard {
-    background: #FFFFFF;
+.card {
+    background-color: green;
     position: absolute;
     width: 600px;
     height: 600px;
