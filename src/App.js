@@ -1,6 +1,7 @@
 import './App.css';
 import ForceGraphMaker from './components/forceGraphMaker';
 import {useState} from 'react'
+import { render } from '@testing-library/react';
 
 
 function App() {
