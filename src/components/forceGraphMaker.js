@@ -21,7 +21,7 @@ function ForceGraphMaker(criteria) {
       console.log('text decoded:', text);
       masterBondData = JSON.parse(text)
       let bond_data = {"nodes" : [], "links": []}
-
+      console.log(JSON.stringify(masterBondData))
       console.log(criteria)
       
       bond_data.nodes = masterBondData.nodes.filter(node => criteria.region.includes(node.region) & criteria.country.includes(node.country) & criteria.rating.includes(node.rating) & criteria.sector.includes(node.sector) & criteria.ticker.includes(node.ticker) & criteria.maturity.includes(node.maturity))
@@ -52,7 +52,7 @@ function ForceGraphMaker(criteria) {
     return (
       <div>
         <ForceGraph2D graphData={bondData} ref={fgRef} 
-            width={600}
+            width={900}
             height={600}
             nodeAutoColorBy="group"
             nodeCanvasObject={(node, ctx) => {
