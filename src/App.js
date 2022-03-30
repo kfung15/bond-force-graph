@@ -18,7 +18,6 @@ function App() {
 
   return(
     <div>
-      <h1>Test this out !</h1>
       <Card contentObj = {contentObj}
       />
     </div>     

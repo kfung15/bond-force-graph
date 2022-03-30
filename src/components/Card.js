@@ -1,9 +1,11 @@
 import React from 'react';
+import './Card.css'
+
 
 function Card (props) {
 
     return (
-            <div classname="forceGraphCard">
+            <div className="forceGraphCard">
                 {props.contentObj}
             </div>
     )

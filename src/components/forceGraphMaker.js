@@ -50,10 +50,10 @@ function ForceGraphMaker(criteria) {
     }, [])
   
     return (
-      <div className="App">
+      <div>
         <ForceGraph2D graphData={bondData} ref={fgRef} 
-            width={1920}
-            height={1080}
+            width={600}
+            height={600}
             nodeAutoColorBy="group"
             nodeCanvasObject={(node, ctx) => {
               const label = node.id;
