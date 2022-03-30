@@ -1,4 +1,11 @@
-.card {
+.card-header .forceGraphCardHeader {
+    font: bold;
+    font-size: large;
+    width: 600px;
+    height: 600px;
+}
+
+.card-body .forceGraphCardBody{
     background-color: green;
     position: absolute;
     width: 600px;
