@@ -1,0 +1,34 @@
+{
+    "nodes": [
+        {"id": "abc", "region": "Asia", "country": "Singapore", "rating": "AA+", "sector": "govt", "ticker": "SGGOV5Y", "maturity": "5y", "group": 1},
+        {"id": "fgh", "region": "Asia", "country": "Singapore", "rating": "AA+", "sector": "govt", "ticker": "SGGOV2Y", "maturity": "2y", "group": 1},
+        {"id": "lpj", "region": "Asia", "country": "Singapore", "rating": "AA+", "sector": "govt", "ticker": "SGGOV1Y", "maturity": "1y", "group": 1},
+        {"id": "alk", "region": "Asia", "country": "Singapore", "rating": "A", "sector": "energy", "ticker": "ENGY5Y", "maturity": "5y", "group": 1},
+        {"id": "pur", "region": "Asia", "country": "Singapore", "rating": "A", "sector": "energy", "ticker": "ENGY2Y", "maturity": "2y", "group": 1},
+        {"id": "jek", "region": "Asia", "country": "Singapore", "rating": "A", "sector": "energy", "ticker": "ENGY1Y", "maturity": "1y", "group": 1},
+        {"id": "mkl", "region": "Asia", "country": "Singapore", "rating": "AA", "sector": "automotive", "ticker": "AUTO1Y", "maturity": "1y", "group": 1}
+    ],
+
+    "links": [
+        {"source": "abc", "target": "fgh", "value": 0.05, "distance": 50}, 
+        {"source": "abc", "target": "lpj", "value": 0.19, "distance": 20},  
+        {"source": "abc", "target": "alk", "value": 0.1234, "distance": 30},
+        {"source": "abc", "target": "pur", "value": 0.6585,"distance": 20},
+        {"source": "abc", "target": "jek", "value": 0.4823, "distance": 10},
+        {"source": "abc", "target": "mkl", "value": 0.4823, "distance": 20},
+        {"source": "fgh", "target": "lpj", "value": 0.9334,"distance": 30},
+        {"source": "fgh", "target": "alk", "value": 0.7854,"distance": 20},
+        {"source": "fgh", "target": "pur", "value": 0.7854,"distance": 10},
+        {"source": "fgh", "target": "jek", "value": 0.7234,"distance": 20},
+        {"source": "fgh", "target": "mkl", "value": 0.7234,"distance": 30},
+        {"source": "lpj", "target": "alk", "value": 0.5642,"distance": 50},
+        {"source": "lpj", "target": "pur", "value": 0.5642,"distance": 10},
+        {"source": "lpj", "target": "jek", "value": 0.9272,"distance": 20},
+        {"source": "lpj", "target": "mkl", "value": 0.9272,"distance": 30},
+        {"source": "alk", "target": "pur", "value": 0.5642,"distance": 20},
+        {"source": "alk", "target": "jek", "value": 0.2938,"distance": 10},
+        {"source": "alk", "target": "mkl", "value": 0.2938,"distance": 20},
+        {"source": "pur", "target": "jek", "value": 0.5938,"distance": 30},
+        {"source": "pur", "target": "mkl", "value": 0.5938,"distance": 20},
+        {"source": "jek", "target": "mkl", "value": 0.5938,"distance": 10}]
+}
