@@ -13,12 +13,15 @@ function App() {
   const [rating, setRating] = useState(["AA+"])
   const [sector, setSector] = useState(["govt"])
   const [ticker, setTicker] = useState(["SGGOV5Y", "SGGOV2Y", "SGGOV1Y"])
-  const [maturity, setMaturity] = useState(["5y"])
+  const [maturity, setMaturity] = useState(["5y","2y","1y"])
   let contentObj = ForceGraphMaker({"region": region, "country": country, "rating": rating, "sector": sector, "ticker": ticker, "maturity": maturity})
 
   return(
-    <Card content={contentObj = contentObj}
-    />     
+    <div>
+      <h1>Test this out !</h1>
+      <Card contentObj = {contentObj}
+      />
+    </div>     
   )
 }
 

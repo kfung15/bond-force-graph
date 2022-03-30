@@ -1,14 +1,12 @@
-import React from 'React';
-import {useState} from 'React'  
+import React from 'react';
 
-const Card = (props) => {
-    props.contentObj
+function Card (props) {
+
+    return (
+            <div classname="forceGraphCard">
+                {props.contentObj}
+            </div>
+    )
+
 }
-
-return (
-    <div>
-        <Card classname = "forceGraphCard"
-            
-        />
-    </div>
-)
+export default Card;
