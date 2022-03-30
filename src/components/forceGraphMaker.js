@@ -5,7 +5,7 @@ import {useState, useEffect, useRef} from 'react'
 // This function takes an array of bond ids and returns a corresponding force graph.
 
 
-import rawBondData from "./bondData.txt"
+import rawBondData from "../data/bondData.txt"
 
 function ForceGraphMaker(criteria) {
 
