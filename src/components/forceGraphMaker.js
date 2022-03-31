@@ -8,7 +8,6 @@ import {useState, useEffect, useRef} from 'react'
 import rawBondData from "../data/bondData.txt"
 
 function ForceGraphMaker(criteria) {
-
   let masterBondData = new Array()
 
 
@@ -24,7 +23,7 @@ function ForceGraphMaker(criteria) {
       console.log(JSON.stringify(masterBondData))
       console.log(criteria)
       
-      bond_data.nodes = masterBondData.nodes.filter(node => criteria.region.includes(node.region) & criteria.country.includes(node.country) & criteria.rating.includes(node.rating) & criteria.sector.includes(node.sector) & criteria.ticker.includes(node.ticker) & criteria.maturity.includes(node.maturity))
+      bond_data.nodes = masterBondData.nodes.filter(node => criteria.content.region.includes(node.region) & criteria.content.country.includes(node.country) & criteria.content.rating.includes(node.rating) & criteria.content.sector.includes(node.sector) & criteria.content.ticker.includes(node.ticker) & criteria.content.maturity.includes(node.maturity))
       console.log(bond_data.nodes)
 
       let bondIds = []
@@ -47,7 +46,7 @@ function ForceGraphMaker(criteria) {
       fg.d3Force('link').distance(link => 
         link.distance
       )
-    }, [])
+    }, [criteria])
   
     return (
       <div>

@@ -5,30 +5,31 @@ import ForceGraphMaker from './forceGraphMaker'
 
 
 
-function Card (props) {
-    const [region, setRegion] = useState([])
+
+
+function Card () {
+
+    const [region, setRegion] = useState(["Asia"])
     const [country, setCountry] = useState(["Singapore"])
     const [rating, setRating] = useState(["AA+"])
     const [sector, setSector] = useState(["govt"])
     const [ticker, setTicker] = useState(["SGGOV5Y", "SGGOV2Y", "SGGOV1Y"])
     const [maturity, setMaturity] = useState(["5y","2y","1y"])
+    
 
-    console.log(region)
-    let x = ForceGraphMaker({"region": region, "country": country, "rating": rating, "sector": sector, "ticker": ticker, "maturity": maturity})
-    console.log(x)
     return (
         <div>
             <Container fluid>
                 <Row>
                     <Col xs={7}>
-                        {x}
+                        <ForceGraphMaker content={{region, country, rating, sector, ticker, maturity}}/>
                     </Col>
                     <Col>
                         <Form>
                             <FormLabel>
                                 Region
                             </FormLabel>
-                            <Form.Control type="text" placeholder={region} onChange={e => setRegion(e.target.value)} />
+                            <Form.Control type="text" placeholder={region} onChange={e => setRegion(e.target.value)}/>
                             <FormLabel>
                                 Country
                             </FormLabel>
