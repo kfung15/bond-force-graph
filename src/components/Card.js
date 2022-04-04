@@ -9,12 +9,14 @@ import ForceGraphMaker from './forceGraphMaker'
 
 function Card () {
 
+    const maturityValues = ["5y","2y","1y"]
     const [region, setRegion] = useState(["All"])
     const [country, setCountry] = useState(["All"])
     const [rating, setRating] = useState(["All"])
     const [sector, setSector] = useState(["All"])
-    const [ticker, setTicker] = useState(["SGGOV5Y", "SGGOV2Y", "SGGOV1Y"])
+    const [ticker, setTicker] = useState(["SGGOV", "ENGY"])
     const [maturity, setMaturity] = useState(["5y","2y","1y"])
+    console.log(maturity)
     
 
     return (
@@ -23,7 +25,7 @@ function Card () {
             <Container fluid>
                 <Row>
                     <Col xs={7}>
-                        <ForceGraphMaker content={{region, country, rating, sector}}/>
+                        <ForceGraphMaker content={{region, country, rating, sector, maturity}}/>
                     </Col>
                     <Col>
                         <Form>
@@ -40,7 +42,7 @@ function Card () {
                                     <Dropdown.Item onClick={e => setRegion("Africa")}>Africa</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
-                            {/* <Form.Control type="text" placeholder={region} onChange={e => setRegion(e.target.value)}/> */}
+                            <br />
                             <FormLabel>
                                 Country
                             </FormLabel>
@@ -54,6 +56,7 @@ function Card () {
                                     <Dropdown.Item onClick={e => setCountry("USA")}>USA</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
+                            <br />
                             <FormLabel>
                                 Rating
                             </FormLabel>
@@ -68,7 +71,7 @@ function Card () {
                                     <Dropdown.Item onClick={e => setRating("A")}>A</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
-                            {/* <Form.Control type="text" placeholder={rating} onChange={e => setRating(e.target.value)}/> */}
+                            <br />
                             <FormLabel>
                                 Sector
                             </FormLabel>
@@ -82,15 +85,22 @@ function Card () {
                                     <Dropdown.Item onClick={e => setSector("energy")}>energy</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
-                            {/* <Form.Control type="text" placeholder={sector} onChange={e => setSector(e.target.value)}/> */}
-                            {/* <FormLabel>
-                                Ticker
-                            </FormLabel>
-                            <Form.Control type="text" placeholder={ticker} onChange={e => setTicker(e.target.value)}/>
+                            <br />
                             <FormLabel>
                                 Maturity
                             </FormLabel>
-                            <Form.Control type="text" placeholder={maturity} onChange={e => setMaturity(e.target.value)}/>       */}
+                            
+                            {
+                                maturityValues.map((mats => (
+                                    <Form.Check type="checkbox" defaultChecked={true} label={mats} value={mats} onChange={ e => e.target.checked ? setMaturity([...maturity, e.target.value]) : setMaturity(maturity.filter(mat => mat !== e.target.value)) } ></Form.Check>
+
+                                ) ) )
+                            }
+                            {/* <Form.Check type="checkbox" defaultChecked={true} label="1y" value="1y" onChange={ e => e.target.checked ? setMaturity([...maturity, e.target.value]) : setMaturity(maturity.filter(mat => mat !== e.target.value)) } ></Form.Check>
+                            <Form.Check type="checkbox" label="2y"></Form.Check>
+                            <Form.Check type="checkbox" label="5y"></Form.Check> */}
+
+                            {/* <Form.Control type="text" placeholder={maturity} onChange={e => setMaturity(e.target.value)}/>       */}
                         </Form>
                     </Col>
                 </Row>

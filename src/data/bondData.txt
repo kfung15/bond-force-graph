@@ -1,11 +1,11 @@
 {
     "nodes": [
-        {"id": "abc", "region": "Asia", "country": "Singapore", "rating": "AA+", "sector": "govt", "ticker": "SGGOV5Y", "maturity": "5y", "group": 1},
-        {"id": "fgh", "region": "Asia", "country": "Singapore", "rating": "AA+", "sector": "govt", "ticker": "SGGOV2Y", "maturity": "2y", "group": 1},
-        {"id": "lpj", "region": "Asia", "country": "Singapore", "rating": "AA+", "sector": "govt", "ticker": "SGGOV1Y", "maturity": "1y", "group": 1},
-        {"id": "alk", "region": "Asia", "country": "Singapore", "rating": "A", "sector": "energy", "ticker": "ENGY5Y", "maturity": "5y", "group": 1},
-        {"id": "pur", "region": "Asia", "country": "Singapore", "rating": "A", "sector": "energy", "ticker": "ENGY2Y", "maturity": "2y", "group": 1},
-        {"id": "jek", "region": "Asia", "country": "Singapore", "rating": "A", "sector": "energy", "ticker": "ENGY1Y", "maturity": "1y", "group": 1},
+        {"id": "abc", "region": "Asia", "country": "Singapore", "rating": "AA+", "sector": "govt", "ticker": "SGGOV", "maturity": "5y", "group": 1},
+        {"id": "fgh", "region": "Asia", "country": "Singapore", "rating": "AA+", "sector": "govt", "ticker": "SGGOV", "maturity": "2y", "group": 1},
+        {"id": "lpj", "region": "Asia", "country": "Singapore", "rating": "AA+", "sector": "govt", "ticker": "SGGOV", "maturity": "1y", "group": 1},
+        {"id": "alk", "region": "Asia", "country": "Singapore", "rating": "A", "sector": "energy", "ticker": "ENGY", "maturity": "5y", "group": 1},
+        {"id": "pur", "region": "Asia", "country": "Singapore", "rating": "A", "sector": "energy", "ticker": "ENGY", "maturity": "2y", "group": 1},
+        {"id": "jek", "region": "Asia", "country": "Singapore", "rating": "A", "sector": "energy", "ticker": "ENGYNEW", "maturity": "1y", "group": 1},
         {"id": "mkl", "region": "Asia", "country": "Singapore", "rating": "AA", "sector": "automotive", "ticker": "AUTO1Y", "maturity": "1y", "group": 1}
     ],
 
