@@ -6,7 +6,7 @@
         {"id": "alk", "region": "Asia", "country": "Singapore", "rating": "A", "sector": "energy", "ticker": "ENGY", "maturity": "5y", "group": 1},
         {"id": "pur", "region": "Asia", "country": "Singapore", "rating": "A", "sector": "energy", "ticker": "ENGY", "maturity": "2y", "group": 1},
         {"id": "jek", "region": "Asia", "country": "Singapore", "rating": "A", "sector": "energy", "ticker": "ENGYNEW", "maturity": "1y", "group": 1},
-        {"id": "mkl", "region": "Asia", "country": "Singapore", "rating": "AA", "sector": "automotive", "ticker": "AUTO1Y", "maturity": "1y", "group": 1}
+        {"id": "mkl", "region": "Asia", "country": "Singapore", "rating": "AA", "sector": "automotive", "ticker": "AUTO", "maturity": "1y", "group": 1}
     ],
 
     "links": [

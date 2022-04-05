@@ -29,6 +29,8 @@ function ForceGraphMaker(criteria) {
       bond_data.nodes = criteria.content.rating != "All" ? bond_data.nodes.filter(node => criteria.content.rating === node.rating) : bond_data.nodes
       bond_data.nodes = criteria.content.sector != "All" ? bond_data.nodes.filter(node => criteria.content.sector.includes(node.sector)) : bond_data.nodes
       bond_data.nodes = bond_data.nodes.filter(node => criteria.content.maturity.includes(node.maturity))
+      bond_data.nodes = bond_data.nodes.filter(node => criteria.content.selectedTickers.includes(node.ticker))
+
       
       // console.log(bond_data.nodes)
 
