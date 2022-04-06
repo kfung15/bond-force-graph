@@ -85,6 +85,8 @@ function ForceGraphMaker(criteria) {
               bckgDimensions && ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
             }}
             
+            
+            nodeLabel={(node) => ("ISIN: " + node.id + ", Ticker: " + node.ticker + ", Region: " + node.region + ", Country: " + node.country + ", Sector: " + node.sector + ", Maturity: " + node.maturity)}
             linkWidth={(link) => (link.value * 10)}
             linkLabel={(link) => ("Price Corr (" + link.source.id + "-" + link.target.id + "): " + link.value)}
             />
